@@ -1,0 +1,57 @@
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 100;
+    src: url('woff2/KalamehWeb-thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 200;
+    src: url('woff2/KalamehWeb-extralight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-extralight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 300;
+    src: url('woff2/KalamehWeb-light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 500;
+    src: url('woff2/KalamehWeb-medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 800;
+    src: url('woff2/KalamehWeb-extrabold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-extrabold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: 900;
+    src: url('woff2/KalamehWeb-black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: bold;
+    src: url('woff2/KalamehWeb-bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+    font-family: KalamehWeb;
+    font-style: normal;
+    font-weight: normal;
+    src: url('woff2/KalamehWeb-regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('woff/KalamehWeb-regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

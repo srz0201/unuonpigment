@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Yekan Bakh VF';
+    src: url('YekanBakh-VF.woff') format('woff-variations'),
+        /* will be the standard and works in Safari now */
+    url('YekanBakh-VF.woff') format('woff');
+    /* for the other supporting browsers */
+    src: url('YekanBakh-VF.woff2') format('woff2-variations'),
+        /* will be the standard and works in Safari now */
+    url('YekanBakh-VF.woff2') format('woff2');
+    /* for the other supporting browsers */
+    font-display: fallback;
+}
+
+body {
+
+    -webkit-font-smoothing: antialiased !important;
+    font-synthesis: none !important;
+    -moz-font-feature-settings: "ss01"  , "ss07";
+    -webkit-font-feature-settings: "ss01"  , "ss07";
+    font-feature-settings: "ss01"  , "ss07";
+}
