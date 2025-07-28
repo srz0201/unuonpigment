@@ -1,57 +1,62 @@
-<!-- Our Project Start -->
-<div class="our-project">
+
+<!-- Our Blog Section Start -->
+<div class="our-blog">
     <div class="container">
         <div class="row section-row align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <!-- Section Title Start -->
                 <div class="section-title">
-                    <h2 class="text-anime" data-cursor="-opaque">مقالات</h2>
+                    <h2 class="text-anime-style" data-cursor="-opaque"><span>مقالات</span></h2>
                 </div>
                 <!-- Section Title End -->
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-12">
-                <!-- Project Item Boxes start -->
-                <div class="row project-item-boxes align-items-center">
-
-                    @foreach($last_articles as $last_article)
-                        <div class="col-md-6 project-item-box architecture bedroom">
-                            <!-- Project Item Start -->
-                            <div class="project-item wow fadeInUp">
-                                <div class="project-image">
-                                    <div class="project-featured-image">
-                                        <figure class="image-anime">
-                                            <img src="{{ asset($last_article->image_path) }}" alt="">
-                                        </figure>
-                                    </div>
-
-                                    <div class="project-btn">
-                                        <a href="{{ route('article', $last_article->slug) }}"><img src="images/arrow-white.svg" alt=""></a>
-                                    </div>
-                                </div>
-
-                                <div class="project-content">
-                                    <h3>{{ $last_article->title }}</h3>
-                                    <h2><a href="{{ route('article', $last_article->slug) }}">{{ \Illuminate\Support\Str::limit($last_article->description, 50) }}</a></h2>
-                                </div>
-                            </div>
-                            <!-- Project Item End -->
-                        </div>
-                    @endforeach
-
-                </div>
-                <!-- Project Item Boxes End -->
-                <div class="col-lg-12">
-                    <!-- All Services Button Start -->
-                    <div class="all-services-btn wow fadeInUp" data-wow-delay="0.6s">
-                        <a href="{{ route('articles') }}" class="btn-default">نمایش همه دسته بندی ها</a>
+            @foreach($last_articles as $last_article)
+            <div class="col-lg-4 col-md-6">
+                <!-- Post Item Start -->
+                <div class="post-item wow fadeInUp">
+                    <!-- Post Featured Image Start-->
+                    <div class="post-featured-image">
+                        <figure>
+                            <a href="{{ route('article', $last_article->slug) }}" class="image-anime" data-cursor-text="View">
+                                <img src="{{ asset($last_article->image_path) }}" alt="{{$last_article->title}}">
+                            </a>
+                        </figure>
                     </div>
-                    <!-- All Services Button End -->
+                    <!-- Post Featured Image End -->
+
+                    <!-- Post Item Body Start -->
+                    <div class="post-item-body">
+                        <!-- Post Item Content Start -->
+                        <div class="post-item-content">
+                            <h3><a href="{{ route('article', $last_article->slug) }}">{{$last_article->title}}</a></h3>
+                            <p class="pt-1 text-justify">{{Str::limit($last_article->description,200)}}</p>
+                        </div>
+                        <!-- Post Item Content End -->
+
+                        <!-- Blog Item Button Start -->
+                        <div class="post-item-btn">
+                            <a href="{{ route('article', $last_article->slug) }}" class="post-btn">ادامه مطلب</a>
+                        </div>
+                        <!-- Blog Item Button End -->
+                    </div>
+                    <!-- Post Item Body End -->
                 </div>
+                <!-- Post Item End -->
+            </div>
+            @endforeach
+
+
+            <div class="col-lg-12">
+                <!-- Our Blog Footer Start -->
+                <div class="our-blog-footer wow fadeInUp" data-wow-delay="0.6s">
+                    <a href="{{route('articles')}}" class="btn-default">همه مقالات</a>
+                </div>
+                <!-- Our Blog Footer End -->
             </div>
         </div>
     </div>
 </div>
-<!-- Our Project End -->
+<!-- Our Blog Section End -->

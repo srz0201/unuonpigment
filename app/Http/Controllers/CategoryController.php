@@ -10,6 +10,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::whereCategoryId(null)->latest()->paginate(9);
+
         return view('category.index', compact('categories'));
 
 

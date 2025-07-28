@@ -34,6 +34,7 @@
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb mt-5">
                                 <li class="breadcrumb-item" style="margin-left: 0.5rem;"><a href="{{ route('home') }}">خانه /</a></li>
+                                <li class="breadcrumb-item" style="margin-left: 0.5rem;"><a href="{{ route('category.index') }}">دسته بندی </a></li>
                                 <li aria-current="page" style="color: white;">{{ $category->name }}</li>
                             </ol>
                         </nav>
@@ -106,7 +107,7 @@
                                         </div>
 
                                         <div class="project-btn">
-                                            <a href="{{ route('product.single', $product->slug) }}"><img src="images/arrow-white.svg" alt=""></a>
+                                            <a href="{{ route('product.single', $product->slug) }}"><img src="{{asset('assets/base/assets/images/arrow-white.svg')}}" alt=""></a>
                                         </div>
                                     </div>
 

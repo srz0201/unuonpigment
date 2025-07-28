@@ -43,8 +43,8 @@ Route::get('{lang}/search','ProductController@search')->name('search');
 
 
 Route::get('category', 'CategoryController@index')->name('category.index');
-Route::get('product/{slug}', 'ProductController@index')->name('product.index');
-Route::get('product/single/{slug}', 'ProductController@single')->name('product.single');
+Route::get('products/{slug}', 'ProductController@index')->name('product.index');
+Route::get('product/{slug}', 'ProductController@single')->name('product.single');
 Route::post('/product/comment/{product}/store','ProductController@comment')->name('product.comment.store');
 
 //Article

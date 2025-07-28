@@ -12,7 +12,7 @@
         </div>
 
         <div class="row">
-            @foreach(collect(getCategories())->take(3) as $category)
+            @foreach(collect(getCategories())->take(6) as $category)
                 <div class="col-lg-4 col-md-6">
                     <!-- Service Item Start -->
                     <div class="service-item wow fadeInUp">

@@ -54,12 +54,13 @@
 	--primary-color			: #192324;
 	--secondery-color		: #F8F8F8;
 	--text-color			: #000;
-	--accent-color			: #7C877F;
+	--accent-color			: #3a3f3b;
 	--white-color			: #FFFFFF;
 	--divider-color			: #EAF0EC;
 	--dark-divider-color	: #FFFFFF1A;
 	--error-color			: rgb(230, 87, 87);
 	--default-font			: "Yekan", sans-serif;
+    --bs-breadcrumb-divider :'/';
 }
 
 
@@ -210,7 +211,7 @@ body{
     line-height: 1em;
     text-transform: capitalize;
     border: none;
-    padding: 17px 46px 17px 20px;
+    padding: 17px 20px 17px 46px;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
     z-index: 0;
@@ -225,19 +226,20 @@ body{
 	content: '';
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 0;
     width: 16px;
     height: 16px;
     background-image: url(../images/arrow-white.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    transform: translate(-20px, -50%);
+    transform: translate(20px, -50%) rotate(180deg);
     transition: all 0.4s ease-in-out;
+
 }
 
 .btn-default:hover::before{
-	transform: translate(-18px, -50%);
+	transform: translate(15px, -50%) rotate(180deg);
 }
 
 .btn-default::after{
@@ -398,7 +400,7 @@ body{
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
+	cursor: default;
 }
 
 .section-title h2{
@@ -406,7 +408,7 @@ body{
 	font-weight: 700;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
+
 }
 
 .section-title h1 span,
@@ -445,6 +447,7 @@ body{
 header.main-header{
 	position: relative;
 	z-index: 100;
+    background-color: #00000047;
 }
 
 header.main-header .header-sticky{
@@ -471,7 +474,7 @@ header.main-header .header-sticky.active{
 }
 
 .navbar{
-	padding: 30px 0;
+    padding: 5px 0 5px 0;
 	align-items: center;
 	border-bottom: 1px solid var(--dark-divider-color);
 }
@@ -714,8 +717,8 @@ header.main-header .header-sticky.active .navbar{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 280px 0 250px;
-	min-height: 100vh;
+    padding: 225px 0 220px;
+    min-height: 80vh;
 	margin-top: -118px;
 }
 
@@ -755,8 +758,8 @@ header.main-header .header-sticky.active .navbar{
 
 .hero.hero-slider-layout .hero-slide{
 	position: relative;
-    padding: 280px 0 250px;
-	min-height: 100vh;
+    padding: 360px 0 270px;
+    min-height: 95vh;
 }
 
 .hero.hero-slider-layout .hero-slide::before{
@@ -814,7 +817,8 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .hero-content .section-title h3,
-.hero-content .section-title h1{
+.hero-content .section-title h1,
+.hero-content .section-title h2{
 	color: var(--white-color);
 }
 
@@ -1220,7 +1224,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .our-services{
-	padding: 100px 0;
+	padding: 10px 0;
 }
 
 .service-item{
@@ -1231,7 +1235,7 @@ header.main-header .header-sticky.active .navbar{
 
 .service-image a{
 	display: block;
-	cursor: none;
+
 }
 
 .service-image a figure::before{
@@ -1262,7 +1266,7 @@ header.main-header .header-sticky.active .navbar{
 .service-btn{
 	position: absolute;
 	top: 40px;
-	right: 40px;
+	left: 40px;
 	z-index: 1;
 }
 
@@ -1283,12 +1287,12 @@ header.main-header .header-sticky.active .navbar{
 
 .service-btn a img{
 	max-width: 20px;
-	transform: rotate(-45deg);
+	transform: rotate(-140deg);
 	transition: all 0.4s ease-in-out;
 }
 
 .service-btn a:hover img{
-	transform: rotate(0)
+	transform: rotate(-180deg)
 }
 
 .service-content{
@@ -1503,7 +1507,7 @@ header.main-header .header-sticky.active .navbar{
 
 .project-btn img{
 	max-width: 24px;
-	transform: rotate(-45deg);
+	transform: rotate(-145deg);
 	transition: all 0.4s ease-in-out;
 }
 
@@ -1512,7 +1516,7 @@ header.main-header .header-sticky.active .navbar{
 }
 
 .project-btn a:hover img{
-	transform: rotate(0deg);
+	transform: rotate(-180deg);
 }
 
 .project-featured-image img{
@@ -1556,7 +1560,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .how-we-work{
-	background: var(--primary-color);
+	/*background: var(--primary-color);*/
 	padding: 100px 0;
 }
 
@@ -1901,25 +1905,26 @@ header.main-header .header-sticky.active .navbar{
 	color: var(--primary-color);
 	font-weight: 500;
 	text-transform: capitalize;
-	padding-right: 25px;
+	padding-left: 25px;
 }
 
 .post-item-btn a::after{
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 0;
-	transform: translate(0px , -50%);
+	left: 0;
+	transform: translate(0px , -50%) rotate(180deg);
 	width: 17px;
 	height: 16px;
 	background: url('../images/arrow-dark.svg') no-repeat;
 	background-position: right center;
 	background-size: cover;
 	transition: all 0.4s ease-in-out;
+
 }
 
 .post-item-btn a:hover::after{
-	transform: translate(2px , -50%);
+	transform: translate(-2px , -50%) rotate(180deg);
 }
 
 .our-blog-footer{
@@ -1932,7 +1937,7 @@ header.main-header .header-sticky.active .navbar{
 /************************************/
 
 .main-footer{
-	padding: 80px 0 0;
+	padding: 60px 0 0;
 	background: var(--primary-color);
 }
 
@@ -2062,6 +2067,7 @@ header.main-header .header-sticky.active .navbar{
 
 .footer-contact-content{
 	width: calc(100% - 50px);
+    direction: ltr;
 }
 
 .footer-contact-content p{
@@ -2158,12 +2164,11 @@ header.main-header .header-sticky.active .navbar{
 
 .page-header-box h1{
 	display: inline-block;
-	font-size: 80px;
+	font-size: 40px;
     font-weight: 700;
 	color: var(--white-color);
     letter-spacing: -0.02em;
     margin-bottom: 10px;
-    cursor: none;
 }
 
 .page-header-box ol{
@@ -3764,7 +3769,7 @@ header.main-header .header-sticky.active .navbar{
 
 	.service-btn{
 		top: 20px;
-		right: 20px;
+		left: 20px;
 	}
 
 	.service-btn a{
@@ -4718,6 +4723,10 @@ header.main-header .header-sticky.active .navbar{
 	.error-page-image img{
         max-width: 100%;
     }
+
+    .telegram-fixed {
+        bottom: 95px!important;
+    }
 }
 
 /************** Home Page Telegram **************/
@@ -4739,3 +4748,6 @@ header.main-header .header-sticky.active .navbar{
 	transform: scale(1.05);
 }
 /************** End Home Page Telegram **************/
+.text-justify{
+    text-align: justify!important;
+}
